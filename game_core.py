@@ -100,14 +100,6 @@ def colorTile(event):
 
 
 
-
-  
-    
-
-
-
-
-
 #** Main Game Loop
 
 while run == True: 
