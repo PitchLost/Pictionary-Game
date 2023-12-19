@@ -7,14 +7,14 @@ import threading
 
 
 #Import the task function 
-from new_task import new_task, pictures, picture_to_draw
+from new_task import new_task, pictures, picture_to_draw, update_text
 
 
 from map_functions import draw_map_comps
 
 
 # Import the submit script: 
-from submit_drawing import submit_drawing, amount_task, next_task
+from submit_drawing import submit_drawing, amount_task
 
 
 
@@ -115,7 +115,7 @@ while run == True:
 
     # Give a task
 
-    new_task(screen, screen_height, screen_width)
+    new_task(screen, screen_height, screen_width, picture_to_draw)
     task_given = True
         
     # Draw all the rectangles each tick
@@ -155,6 +155,7 @@ while run == True:
                 submit_drawing(pictures, picture_to_draw)
                 # Remove the drawn rectangles
                 remove_rects()
+                picture_to_draw = update_text(picture_to_draw)
 
             
 

@@ -6,7 +6,7 @@ import threading
 
 # Global Variables: 
 
-next_task = None
+
 
 #FIXME: These Defo are not working at the moment: 
 # Output: 
@@ -29,7 +29,7 @@ def submit_drawing(pictures, picture_to_draw):
     print(' You Have done: ',amount_task, 'Tasks')
 
     # Make the next task
-
+   
     next_task = random.choice(pictures)
     while next_task in prev_tasks: 
         next_task = random.choice(pictures)
@@ -38,6 +38,16 @@ def submit_drawing(pictures, picture_to_draw):
     
     picture_to_draw = next_task
     print('Your next task will be',picture_to_draw)
+
+    return next_task
+
+
+
+
+
+
+
+
     
 
 
