@@ -36,7 +36,7 @@ def new_task(screen, screen_height, screen_width, picture_to_draw):
    font = pygame.font.Font(None, 36)  # You can choose the font and size here
 
    # Render text 
-   text = font.render("Draw Me a ", picture_to_draw, True, WHITE)  # Text, anti-aliasing, color
+   text = font.render("Draw Me a " + picture_to_draw, True, WHITE)  # Text, anti-aliasing, color
 
       
     # Display text
