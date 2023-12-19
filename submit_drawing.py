@@ -21,12 +21,11 @@ amount_task = len(prev_tasks)
 # Function to submit drawing: 
 
 def submit_drawing(pictures, picture_to_draw): 
-    print('Submit Drawing')
+ 
    
 
     prev_tasks.append(picture_to_draw)
-    print("These are the previous tasks you have done:",prev_tasks)
-    print(' You Have done: ',amount_task, 'Tasks')
+
 
     # Make the next task
    
@@ -37,7 +36,7 @@ def submit_drawing(pictures, picture_to_draw):
 
     
     picture_to_draw = next_task
-    print('Your next task will be',picture_to_draw)
+    
 
     return next_task
 

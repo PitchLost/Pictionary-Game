@@ -28,7 +28,7 @@ BLUE = (0,0,255)
 # Function to assign a new task to the user:
 
 def new_task(screen, screen_height, screen_width, picture_to_draw): 
-   print(picture_to_draw)
+   
   
     # Font: 
 
@@ -61,8 +61,9 @@ def update_text(next_task):
 
 pictures = ['Duck','Chair','Table','Skateboard','Gun','Cup','Car','Bike','Person', 'Laptop']
 
+
 picture_to_draw = random.choice(pictures)
-print(picture_to_draw)
+
 
 
 
