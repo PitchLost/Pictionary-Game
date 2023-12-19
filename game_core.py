@@ -17,7 +17,9 @@ from map_functions import draw_map_comps
 from submit_drawing import submit_drawing, amount_task
 
 
+# Global Variables: 
 
+coords = []
 
 
 pygame.init()
@@ -83,17 +85,19 @@ def colorTile(event):
     
     # I found it easier to make a variable containing both the coords in one
 
-    new_pos = cursorX, cursorY
+    new_pos = cursorX - 10, cursorY - 10
 
     # Draw the rect on the click
     rect = pygame.Rect((cursorX - 10, cursorY - 10), (20, 20))
+    coords.append(new_pos)
+    
 
 
     # Add the current drawn rectangles to the drawn_rectangles array
     # This is important to retaining the position of them each game tick
 
     drawn_rectangles.append(rect)  # Store the rectangles in a list
-    print(new_pos)
+   
     
     # Update the display
     pygame.display.flip()
@@ -148,7 +152,7 @@ while run == True:
         elif event.type == pygame.MOUSEBUTTONDOWN: 
             global mouse_pos
             mouse_pos = pygame.mouse.get_pos() 
-            print('Mouse Pos', mouse_pos)
+           
 
             # Check if the click is on top of the submit button: 
             if submit_btn.collidepoint(mouse_pos): 
@@ -156,6 +160,7 @@ while run == True:
                 # Remove the drawn rectangles
                 remove_rects()
                 picture_to_draw = update_text(picture_to_draw)
+                print('The coords from that drawing is:', coords)
 
             
 
